@@ -12,7 +12,7 @@ if(isset($_POST['submit']))
     $married = mysqli_escape_string($conn, $_POST['married']);
     $working = mysqli_escape_string($conn, $_POST['working']);
 
-    $sql = "INSERT INTO person(name, email, phonenumber, gender, dob, weight, married, workingin)
+    $sql = "INSERT INTO person(name, email, phonenumber, gender, dob, weight, married, working)
            VALUES('$name','$email','$phonenumber','$gender','$dob','$weight','$married','$working');";
     if(mysqli_query($conn, $sql))
     {
